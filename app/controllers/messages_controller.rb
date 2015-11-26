@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :login? 
+  before_action :login?
   before_action :set_message, only: [:show, :edit, :update, :destroy]
 
   # GET /messages
@@ -70,6 +70,6 @@ class MessagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def message_params
-      params.require(:message).permit(:title, :body, :signature)
+      params.require(:message).permit(:title, :body)
     end
 end
